@@ -27,9 +27,9 @@ public class sTART {
 			String mServerName = mHost + ":" + mPort + "/";
 			String mConnName = mDatabaseUrl + mServerName + mDatabaseName;
 			Class.forName(mDriverName);
-			System.out.println("开始连接...\r\n" + mConnName);
+			System.out.println("Start Connect...\r\n" + mConnName);
 			conn = DriverManager.getConnection(mConnName, mUserName, mPassword);
-			System.out.println("连接完成...");
+			System.out.println("Connected...");
 			stmt = conn.createStatement();
 			sql = "Select * From MyTest";
 			rst = stmt.executeQuery(sql);
@@ -41,7 +41,7 @@ public class sTART {
 				mName = rst.getString("FName");
 				System.out.println("ID:" + mID + " | Name:" + mName);
 			}
-			System.out.println("----打印结束了 OK----");
+			System.out.println("----Print Over----");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
