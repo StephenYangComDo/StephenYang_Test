@@ -41,7 +41,7 @@ public class sTART {
 				mName = rst.getString("FName");
 				System.out.println("ID:" + mID + " | Name:" + mName);
 			}
-			System.out.println("----打印结束----");
+			System.out.println("----打印结束了 OK----");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
